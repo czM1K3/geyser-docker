@@ -1,0 +1,10 @@
+services:
+  runner:
+    build: .
+    volumes:
+      - ./data:/data
+    environment:
+      - UID=1000
+      - GID=1000
+    ports:
+      - "19132:19132/udp"
